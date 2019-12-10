@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+            margin:10px 0 ;
+            padding:0;
+        }
+        
+        #head{
+            background-color: orange;
+            height:60px;
+        }
+        #head img{
+            padding-left: 150px;
+            padding-top:10px;
+        }
+        #head-1{
+            float: right;
+            margin-right: 600px;
+            margin-top:12px;
+            width:422px;
+            height:39px;
+            background-image: url(img/header.png);
+            background-position: 80% 50%;
+        }
+        #head-1 font{
+            color: grey;
+            padding-left: 52px;
+            
+        }
+        #head-1 a{
+            color:white;
+            text-decoration: none;
+            font-size:20px;
+            padding-left:175px;
+            padding-top:4px;
+            display: inline-block;
+        }
+        #shoppingCart{
+            padding-left:650px;
+            font-size: 18px;
+        }
+        #shoppingCart span{
+            color: red;
+        }
+        #section{
+            margin: auto;
+            background-color: white;
+            width: 82%;
+        }
+        table{
+            padding: 10px;
+            border-spacing: 15px 10px;
+        }
+        table td{
+            padding-left:10px;
+        }
+        table img{
+            width: 255px;
+            height: 190px;
+        }
+        .tr_two{
+            font-size: 16px;
+            font-weight: inherit;
+        }
+        .tr_two td:nth-child(2n){
+            text-align: right;
+        }
+        .tr_three{
+            font-size: 14px;
+            color: orange;
+            text-align: right;
+        }
+        .tr_four{
+            font-size: 14px;
+            color: grey;
+        }
+        .tr_four td:nth-child(3n){
+            text-align: right;
+        }
+        .tr_five{
+            text-align: right;
+        }
+        .tr_five input{
+            border: 1px solid #d3d1d1;
+            height: 25px;
+            background-color: #f2f2f2;
+        }
+        #myShopping{
+            display: none;
+        }
+        #shoppingTable{
+            border-collapse: collapse;
+            width: 82%;
+            margin:auto;
+            border-bottom: 1px solid gray;
+    
+        }
+        #shoppingTable tr:nth-child(1){
+            background-color: rgb(95, 95, 189);
+        }
+        #shoppingTable td{
+            text-align: center;
+        }
+        #shoppingTable tr td:nth-child(4) input:nth-child(2n+1){
+            background-color: #d3d1d1;
+            width: 20px;
+            text-align: center;
+        }
+        #shoppingTable tr td:nth-child(4) input:nth-child(2n){
+            width: 50px;
+            text-align: center;
+        }
+        #shoppingTable tr td:nth-child(5) input{
+            background-color: #d3d1d1;
+            width: 50px;
+        }
+        .button{
+            margin-left:130px;
+            margin-top:5px;
+            width: 70px;
+            height: 36px;
+            background-color: rgb(236, 229, 229);
+        }
+        #settle{
+            margin-left:1200px;
+        }
+        #settleButton{
+            width: 50px;
+            height:25px;
+            background-color: rgb(236, 229, 229);
+        }
+        ul{
+            padding-top:20px;
+            list-style: none;
+            display:flex;
+            height: 360px;
+        }
+        li{
+            width: 260px;
+            margin-right: 20px;
+        }
+        li span{
+            margin-right: 20px;
+        }
+        ul img{
+            width: 260px;
+        }
+        </style>
+</head>
+<body>
+    <div id="head">
+        <img src="img/ceiling-logo2.png">
+        <div id="head-1">
+            <font>搜索商家、美食</font>
+            <a href="">搜索</a>
+        </div>
+   
+       </div>
+       <p id="shoppingCart">我的购物车(<span id='listNumber'>0</span>)</p>
+       <div id="section"> 
+           <ul id="food">
+                   <!-- <li>
+                           <img src="./img/food1.jpg" alt="">
+                           <span>A米汉堡</span>
+                           <span>16元/份</span>
+                           <p>月销8148单</p>
+                           <span>起送￥10元</span><span>免费送费</span><span>45分钟</span>
+                           <button>加入购物车</button>
+                         </li> -->
+           </ul>
+       </div>
+       <div id="myShopping">
+           <table id="shoppingTable">
+               <tr>
+                   <th>全选<input type="checkbox" class="selectAll"></th>
+                   <th>菜品</th>
+                   <th>价格(元/份)</th>
+                   <th>数量</th>
+                   <th>操作</th>
+               </tr>
+           </table>
+           <input type="button" value="全部删除" class="button">
+           <br>
+           <input type="button" value="继续点餐" class="button">
+           <p id="settle">合计¥<span id="count">0</span><input type="button" value="结算" id="settleButton"></p>
+       </div>
+       <script src="js/jquery-3.2.1.min.js"></script>
+       <script src="js/index.js"></script>
+</body>
+</html>
