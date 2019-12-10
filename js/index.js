@@ -7,7 +7,7 @@ $.ajax({
     },
     dataType:'json',
     error:function(a,b,c){
-        console.log('---error---')
+        console.log('1---error---1')
     }
 })
 
